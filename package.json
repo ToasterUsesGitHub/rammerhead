@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
     "start": "node src/server.js",
-    "build": "node src/build.js",
+    "build": "npm install; node src/build.js",
     "bstart": "npm run build && npm run start",
     "test": "npm run format && npm run lint && npm run build",
     "lint": "eslint -c .eslintrc.json --ext .js src",
